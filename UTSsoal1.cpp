@@ -9,23 +9,30 @@ int main() {
     // Input data karyawan
     cout << "Masukkan nama karyawan: ";
     getline(cin, namaKaryawan);
-    cout << "Masukkan golongan (2 atau 3): ";
+    cout << "Masukkan golongan (1 - 3): ";
     cin >> golongan;
-    cout << "Masukkan jumlah jam kerja dalam seminggu: ";
-    cin >> jamKerja;
+   
 
     // Hitung upah pokok berdasarkan golongan
     int upahPokok;
-    if (golongan == 2) {
-        upahPokok = jamKerja * 35000;
+    if (golongan == 1) {
+        upahPokok =  25000;
+    }
+    else if (golongan == 2) {
+        upahPokok =  35000;
     }
     else if (golongan == 3) {
-        upahPokok = jamKerja * 50000;
+        upahPokok =  50000;
     }
     else {
-        cout << "Golongan tidak valid. Harap masukkan 2 atau 3." << endl;
-        return 1; // Keluar program dengan kode kesalahan
+        cout << "Golongan tidak valid. Harap masukkan 1 - 3." << endl;
+        return 0; // Keluar program dengan kode kesalahan
     }
+    
+    cout << "Masukkan jumlah jam kerja dalam seminggu: ";
+    cin >> jamKerja;
+   
+    int total = upahPokok* jamKerja;
 
     // Hitung uang lembur (jika ada)
     int uangLembur = 0;
@@ -34,11 +41,11 @@ int main() {
     }
 
     // Hitung gaji total
-    int gajiTotal = upahPokok + uangLembur;
+    int gajiTotal = total + uangLembur;
 
     // Tampilkan hasil
- 
-    cout << "Gaji Total: Rp " << gajiTotal << endl;
+
+    cout << "Total Gaji " << namaKaryawan << " Per Minggu : Rp " << gajiTotal << endl;
 
     return 0;
 }
