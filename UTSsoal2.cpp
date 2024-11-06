@@ -12,10 +12,10 @@ int main() {
     cout << "Masukkan jumlah mobil: ";
     cin >> jumlahMobil;
 
-    cout << "Masukkan jam masuk (format 24 jam): ";
+    cout << "input jam masuk (format 24 jam): ";
     cin >> jamMasuk;
 
-    cout << "Masukkan jam keluar (format 24 jam): ";
+    cout << "input jam keluar (format 24 jam): ";
     cin >> jamKeluar;
 
     // Hitung total pendapatan
@@ -29,8 +29,10 @@ int main() {
     // Menghitung total pendapatan
     totalPendapatan = (jumlahMotor * tarifMotor + jumlahMobil * tarifMobil) * durasiParkir;
 
+    cout << " \n";
+
     // Menampilkan total pendapatan
-    cout << "Total pendapatan penjaga portal parkir UNISBA: Rp " << totalPendapatan <<"(" <<durasiParkir<< " jam)" << endl;
+    cout << "Total biaya parkir: Rp " << totalPendapatan <<" (" <<durasiParkir<< " jam)" << endl;
 
     return 0;
 }
