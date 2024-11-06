@@ -30,7 +30,7 @@ int main() {
         return 0; // Keluar program dengan kode kesalahan
     }
 
-    cout << "Masukkan jam kerja and seminggu: ";
+    cout << "Masukkan jam kerja and per minggu: ";
     cin >> jamKerja;
 
     int total = upahPokok * jamKerja;
